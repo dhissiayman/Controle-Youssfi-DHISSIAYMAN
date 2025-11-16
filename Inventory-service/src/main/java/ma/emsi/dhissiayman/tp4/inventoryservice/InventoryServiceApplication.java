@@ -38,6 +38,9 @@ public class InventoryServiceApplication {
 					.price(10000)
 					.quantity(10)
 					.build());
+			productRepository.findAll().forEach(p->{
+				System.out.println(p.toString());
+			});
 
 
 		};
