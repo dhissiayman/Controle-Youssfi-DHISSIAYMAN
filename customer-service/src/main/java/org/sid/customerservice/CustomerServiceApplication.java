@@ -30,7 +30,7 @@ public class CustomerServiceApplication {
 			customerRepository.findAll().forEach(c->{
 				System.out.println(c.getName());
 				System.out.println(c.getId());
-				System.out.println(c.getName());
+				System.out.println(c.getEmail());
 			});
 
 		};
