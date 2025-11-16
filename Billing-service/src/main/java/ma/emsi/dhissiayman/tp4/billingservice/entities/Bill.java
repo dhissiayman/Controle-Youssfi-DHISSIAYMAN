@@ -2,6 +2,7 @@ package ma.emsi.dhissiayman.tp4.billingservice.entities;
 
 import jakarta.persistence.*;
 import lombok.*;
+import ma.emsi.dhissiayman.tp4.billingservice.MODEL.Customer;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -21,4 +22,7 @@ public class Bill {
     private long customerId;
     @OneToMany(mappedBy = "bill")
     private List<ProductItem> productItems = new ArrayList<>();
+
+    @Transient
+    private Customer customer;
 }

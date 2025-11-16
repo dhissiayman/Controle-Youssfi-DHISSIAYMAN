@@ -2,6 +2,7 @@ package ma.emsi.dhissiayman.tp4.billingservice.entities;
 
 import jakarta.persistence.*;
 import lombok.*;
+import ma.emsi.dhissiayman.tp4.billingservice.MODEL.Product;
 
 @Entity
 @NoArgsConstructor
@@ -18,5 +19,7 @@ public class ProductItem {
     private Bill bill;
     private int quantity;
     private double unitPrice;
+    @Transient
+    private Product product;
 
 }
