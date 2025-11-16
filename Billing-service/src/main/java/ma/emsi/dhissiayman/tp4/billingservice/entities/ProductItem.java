@@ -7,14 +7,9 @@ import lombok.*;
 import ma.emsi.dhissiayman.tp4.billingservice.MODEL.Product;
 
 @Entity
-@NoArgsConstructor
-@AllArgsConstructor
-@Builder
-@Getter
-@Setter
+@Getter @Setter @NoArgsConstructor @AllArgsConstructor @Builder
 public class ProductItem {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String productId;
     @ManyToOne
@@ -24,5 +19,4 @@ public class ProductItem {
     private double unitPrice;
     @Transient
     private Product product;
-
 }
